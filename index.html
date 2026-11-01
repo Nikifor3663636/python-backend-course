@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Python Backend с нуля</title>
+  <meta name="description" content="Интерактивный курс Python Backend: теория, тесты и задачи с автопроверкой прямо в браузере.">
+  <meta name="theme-color" content="#0f1720" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/" aria-label="На главную">
+      <img src="icons/icon.svg" alt="" width="28" height="28">
+      <span class="brand-text">Python Backend</span>
+    </a>
+    <div class="top-stats">
+      <span class="chip" id="xp-chip" title="Опыт">0 XP</span>
+      <span class="chip" id="streak-chip" title="Дней подряд с нормой">🔥 0</span>
+      <button class="chip timer-chip" id="timer-btn" type="button" aria-label="Таймер">
+        <span class="timer-dot" aria-hidden="true"></span><span id="timer-text">0:00:00</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <nav class="bottombar" aria-label="Разделы">
+    <a href="#/" data-nav="home"><span aria-hidden="true">📚</span>Курс</a>
+    <a href="#/next" data-nav="next"><span aria-hidden="true">▶</span>Продолжить</a>
+    <a href="#/stats" data-nav="stats"><span aria-hidden="true">📈</span>Статистика</a>
+  </nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="dialog"><div id="dialog-body"></div></dialog>
+
+  <script src="vendor/marked.min.js"></script>
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
